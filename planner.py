@@ -3,18 +3,22 @@ import urllib3
 import pypdf
 from openai import OpenAI
 import sys
+import argparse
 
 # Step 1: Download the text from the given URL
 # Disable SSL warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-if len(sys.argv) != 4:
-  print("Usage: planner.py <system_prompt_number> <user_prompt_number> <output_filename>")
-  sys.exit(1)
+parser = argparse.ArgumentParser(description="Process some prompts.")
+parser.add_argument('-s', '--system', required=True, help='System prompt number')
+parser.add_argument('-u', '--user', required=True, help='User prompt number')
+parser.add_argument('-f', '--filename', required=True, help='Output filename')
 
-system_prompt_number = sys.argv[1]
-user_prompt_number = sys.argv[2]
-output_filename = sys.argv[3]
+args = parser.parse_args()
+
+system_prompt_number = args.system
+user_prompt_number = args.user
+output_filename = args.filename
 
 system_prompt_url = f"https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/system_prompts/{system_prompt_number}_system.md"
 user_prompt_url = f"https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/tasks/{user_prompt_number}_task.md"
