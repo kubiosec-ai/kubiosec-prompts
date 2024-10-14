@@ -1,90 +1,83 @@
-# Cloud Native Application Protection Platform (CNAPP) Training
+## CNAPP (Cloud Native Application Protection Platform) Training Plan
 
-## Introduction to CNAPP
+### 1. Training Objective and Audience Analysis
+#### Objective Identification:
+- **Core Objective:** To provide participants with a high-level understanding of Cloud Native Application Protection Platforms (CNAPP) and how they secure cloud-native applications.
+- **Skills/Knowledge:** By the end of this training, participants should understand the core concepts, components, and capabilities of CNAPP solutions.
 
-As organizations transition into cloud infrastructures, securing applications in complex hybrid and multi-cloud environments is increasingly challenging. A Cloud Native Application Protection Platform (CNAPP) represents a new integrated approach to securing cloud-native applications by combining multiple capabilities into a single platform. CNAPP focuses on safeguarding applications across the whole application lifecycle, from development to production, seamlessly integrating with cloud-native technologies and frameworks.
+#### Target Audience:
+- **Who are the participants?** IT professionals, Cloud architects, and Security specialists at the beginner to intermediate level.
+- **Background/Familiarity:** Participants may have basic knowledge of cloud services and cybersecurity principles.
+- **Challenges:** Address misconceptions about cloud security and demonstrate how CNAPP enhances application protection in cloud environments.
 
-### Learning Objectives
+#### Problem Solving:
+- **Problem Statement:** Participants often struggle with securing complex, dynamic cloud-native environments. This training will equip them with knowledge to approach this challenge effectively.
+- **Daily Improvement:** Post-training, attendees should be able to implement or recommend CNAPP solutions that contribute to secure and resilient cloud-native applications.
 
-By the end of this module, participants will be able to:
-1. Understand the core concepts and principles of CNAPP.
-2. Identify the key components and capabilities of CNAPP.
-3. Recognize the challenges and threats CNAPP addresses.
-4. Appreciate the benefits of adopting a CNAPP approach in cloud environments.
+### 2. Content Breakdown and Module Design
+#### Key Modules:
+1. **Introduction to Cloud-Native Concepts**
+   - Understanding what "cloud-native" means
+   - Core components of a cloud-native architecture (containers, microservices, etc.)
 
-## High-Level Concepts
+2. **Overview of Cloud Security Challenges**
+   - Common security threats in cloud environments
+   - Why traditional security models are insufficient
 
-### 1. Unified Security Framework
+3. **What is CNAPP?**
+   - Definition and purpose of CNAPP
+   - Key components: visibility, compliance, threat detection, risk management
 
-**Description:**
-CNAPP consolidates multiple security functionalities into a unified framework, addressing both cloud and container security. This holistic approach simplifies the user experience by providing a single pane of glass for managing security across various services and environments.
+4. **CNAPP Architecture and Functionality**
+   - How CNAPP integrates with cloud services
+   - Overview of features: vulnerability scanning, runtime protection, etc.
 
-**Key Components:**
-- **Identity and Access Management:** Ensures only authorized users have access.
-- **Data Protection:** Secures data at rest and in transit.
-- **Application Security:** Involves code scanning and vulnerability management.
-- **Threat Detection and Response:** Real-time monitoring and incident response.
-- **Compliance Management:** Continuously checks for policy enforcement and compliance with regulations.
+5. **Best Practices for CNAPP Deployment**
+   - Strategies for successful implementation
+   - Integration with existing security programs
 
-### 2. Shift-Left Security
+#### Sub-tasks for Each Module:
+- **Learning Outcomes:** Identify key concepts and features of CNAPP; understand its role in cloud security strategy.
+- **Content Progression:** Follow a logical flow from basic cloud-native concepts to advanced CNAPP features.
 
-**Description:**
-Adopting a CNAPP encourages the integration of security early in the development cycle—a concept known as "shift-left." By embedding security checks and validations into the development pipeline, organizations can identify vulnerabilities before deployment.
+#### Assessment Plan:
+- **Assessments:** Use quizzes and scenario-based questions to test understanding of CNAPP concepts.
 
-**Real-World Example:**
-Implementing static application security testing (SAST) tools in the CI/CD pipeline to detect vulnerabilities in code early.
+### 3. Training Methodology and Format
+#### Step 1: Planning and Resources:
+- **Timeline:** Conduct 2-3 hour sessions over a week.
+- **Materials:** Use slides, case studies, and CNAPP tool demos.
 
-### 3. Policy-Driven Governance
+#### Step 2: Training Methodology:
+- **Delivery Format:** Offer a virtual instructor-led training format.
+- **Learning Formats:** Blend lectures with interactive discussion and Q&A sessions.
 
-**Description:**
-CNAPP offers centralized policy management to enforce security policies consistently across multiple cloud environments. This governance approach ensures that applications comply with security standards, irrespective of where they are deployed.
+#### Step 3: Course Development:
+- **Learning Materials:** Create detailed presentations and video overviews of CNAPP features.
+- **Step-by-step Guides:** Develop practical scenarios showing CNAPP integration.
 
-**Key Considerations:**
-- Defining security policies at the organizational level.
-- Automating policy enforcement using Infrastructure as Code (IaC).
-- Continuous monitoring to detect policy deviations.
+#### Step 4: Delivery and Engagement:
+- **Engagement Strategies:** Encourage participants to share their experiences and questions.
+- **Real-world Applications:** Use case studies of successful CNAPP implementations.
 
-### 4. Contextual Intelligence
+#### Step 5: Feedback and Improvement:
+- **Feedback Collection:** Gather participant feedback using surveys after each session.
+- **Track Progress:** Record participation and quiz completion rates to assess engagement.
 
-**Description:**
-CNAPP leverages contextual intelligence to provide more meaningful insights into security posture and threat landscape. By understanding the context in which cloud-native applications operate, CNAPP improves risk-based prioritization and decision-making.
+### 4. Milestones and Delivery Schedule
+#### Milestones:
+- **Key Completion Points:** After each module, confirm understanding via quizzes.
+- **Completion Criteria:** Engage with content, successfully complete quizzes, and participate in discussions.
 
-**Capabilities:**
-- Correlation of security data across multiple sources.
-- Insight generation based on application behavior patterns.
-- Prioritized alerts and actionable recommendations.
+#### Delivery Phases:
+- **Pilot Sessions:** Conduct initial pilot sessions with a small group.
+- **Final Delivery:** Offer finalized training sessions to a broader audience.
 
-### 5. Security in Hybrid and Multi-Cloud Environments
+### 5. Training Materials and Handover
+#### Documentation:
+- **Course Documentation:** Provide slide decks, recorded sessions, and reference materials.
+- **Manual:** Offer a handbook summarizing key CNAPP concepts.
 
-**Description:**
-CNAPP extends security capabilities across different cloud environments, supporting hybrid and multi-cloud architectures. This flexibility is crucial for organizations that use various cloud service providers and on-premises infrastructure.
-
-**Benefits:**
-- Consistent security controls across varied environments.
-- Seamless integration with cloud provider APIs.
-- Unified threat intelligence and response mechanism.
-
-## Summary of CNAPP Benefits
-
-- **Increased Efficiency:** Reduces the need for multiple standalone tools.
-- **Enhanced Security Posture:** Provides comprehensive coverage across the cloud-native stack.
-- **Cost-Effectiveness:** Optimizes resource utilization by consolidating tools.
-- **Accelerated Development:** Enables DevSecOps practices through automated security.
-
-## Hands-On Exercise: Exploring a CNAPP Solution
-
-### Objective:
-Participants will explore core functionalities of a leading CNAPP solution by setting up a basic security environment for a cloud-native application.
-
-### Steps:
-1. **Setup Environment:** Create an account on a CNAPP provider platform.
-2. **Integrate with CI/CD:** Connect a Continuous Integration/Continuous Deployment pipeline to illustrate shift-left security.
-3. **Define Policies:** Establish basic security policies for access control and data protection.
-4. **Conduct a Security Scan:** Perform a vulnerability scan on a sample application.
-5. **Analyze Reports:** Review the security posture dashboard and interpret alerts.
-
-### Assessment:
-- **Quizzes:** Evaluate participants' understanding of core concepts through scenario-based questions.
-- **Practical Evaluation:** Submission of a short report detailing the findings from their CNAPP environment exploration.
-
-By the completion of this training, participants will have a foundational understanding of CNAPP, its components, and real-world applications, equipping them to integrate these security practices into their organizations effectively.
+#### Certification or Acknowledgement:
+- **Completion Certification:** Grant certificates recognizing completion of CNAPP training.
+- **Follow-up Plan:** Schedule a follow-up review session to discuss challenges and successes in applying CNAPP concepts.
