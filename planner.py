@@ -1,7 +1,6 @@
 import requests
 import urllib3
 import pypdf
-import os
 from openai import OpenAI
 
 # Step 1: Download the text from the given URL
