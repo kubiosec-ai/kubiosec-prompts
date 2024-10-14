@@ -18,15 +18,16 @@ output_filename = sys.argv[3]
 
 system_prompt_url = f"https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/system_prompts/{system_prompt_number}_system.md"
 user_prompt_url = f"https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/tasks/{user_prompt_number}_task.md"
+
 # Retrieve system prompt
-system_prompt_url = "https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/system_prompts/003_system.md"
+#system_prompt_url = "https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/system_prompts/003_system.md"
 system_response = requests.get(system_prompt_url, timeout=10, verify=False)
 system_response.raise_for_status()  # Check if the request was successful
 retrieved_system_prompt = system_response.text
 print(retrieved_system_prompt)
 
 # Retrieve user prompt
-user_prompt_url = "https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/tasks/001_task.md"
+#user_prompt_url = "https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/tasks/001_task.md"
 user_response = requests.get(user_prompt_url, timeout=10, verify=False)
 user_response.raise_for_status()  # Check if the request was successful
 retrieved_user_prompt = user_response.text
