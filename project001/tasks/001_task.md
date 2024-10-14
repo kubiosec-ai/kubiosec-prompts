@@ -12,6 +12,8 @@ Offer an in-depth explanation of key CNAPP components, including:
 - **KSPM** (Kubernetes Security Posture Management)
 - **CWP** (Cloud Workload Protection)
 - **CIEM** (Cloud Infrastructure Entitlement Management)
+- **Code scanning**
+- **Iac code scanning**
 
 ## Training Length
 The total training duration is 2.5 hours.
