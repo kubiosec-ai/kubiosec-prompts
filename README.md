@@ -12,3 +12,6 @@ pip3 install -r requirements.txt
 ```
 conda deactivate
 ```
+```
+ python3 ./planner.py  -h
+```

@@ -9,10 +9,25 @@ import argparse
 # Disable SSL warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+def display_help():
+  help_text = """
+  Usage: planner.py -s <system_prompt_number> -u <user_prompt_number> -f <output_filename>
+  
+  Arguments:
+  -s, --system    System prompt number (required)
+  -u, --user      User prompt number (required)
+  -f, --filename  Output filename (required)
+  """
+  print(help_text)
+  sys.exit(1)
+
 parser = argparse.ArgumentParser(description="Process some prompts.")
 parser.add_argument('-s', '--system', required=True, help='System prompt number')
 parser.add_argument('-u', '--user', required=True, help='User prompt number')
 parser.add_argument('-f', '--filename', required=True, help='Output filename')
+
+if len(sys.argv) < 7:
+  display_help()
 
 args = parser.parse_args()
 
