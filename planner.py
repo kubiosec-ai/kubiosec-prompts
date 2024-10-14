@@ -26,7 +26,7 @@ print(retrieved_user_prompt)
 client = OpenAI()
 
 response = client.chat.completions.create(
-  model="o1-preview-2024-09-12",
+  model="gpt-4o",
   messages=[
     {
       "role": "system",
