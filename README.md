@@ -1,6 +1,6 @@
 # Setup instructions
 ```
-conda create --name planner python=3.9
+conda create --name planner python=3.11
 ```
 ```
 conda activate planner
