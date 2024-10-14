@@ -2,11 +2,22 @@ import requests
 import urllib3
 import pypdf
 from openai import OpenAI
+import sys
 
 # Step 1: Download the text from the given URL
 # Disable SSL warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+if len(sys.argv) != 4:
+  print("Usage: planner.py <system_prompt_number> <user_prompt_number> <output_filename>")
+  sys.exit(1)
+
+system_prompt_number = sys.argv[1]
+user_prompt_number = sys.argv[2]
+output_filename = sys.argv[3]
+
+system_prompt_url = f"https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/system_prompts/{system_prompt_number}_system.md"
+user_prompt_url = f"https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/tasks/{user_prompt_number}_task.md"
 # Retrieve system prompt
 system_prompt_url = "https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/system_prompts/003_system.md"
 system_response = requests.get(system_prompt_url, timeout=10, verify=False)
@@ -58,5 +69,6 @@ response = client.chat.completions.create(
 )
 
 print("----------------------  Response from OpenAI  ----------------------")
-with open("plan.md", "w") as file:
+output_filename_with_extension = f"{output_filename}.md"
+with open(output_filename_with_extension, "w") as file:
   file.write(response.choices[0].message.content)
