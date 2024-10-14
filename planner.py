@@ -7,11 +7,19 @@ from openai import OpenAI
 # Disable SSL warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-url = "https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/system_prompts/003_system.md"
-response = requests.get(url, timeout=10, verify=False)
-response.raise_for_status()  # Check if the request was successful
-text_from_url = response.text
-print(text_from_url)
+# Retrieve system prompt
+system_prompt_url = "https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/system_prompts/003_system.md"
+system_response = requests.get(system_prompt_url, timeout=10, verify=False)
+system_response.raise_for_status()  # Check if the request was successful
+retrieved_system_prompt = system_response.text
+print(retrieved_system_prompt)
+
+# Retrieve user prompt
+user_prompt_url = "https://raw.githubusercontent.com/kubiosec-ai/kubiosec-prompts/refs/heads/main/project001/task/001_task.md"
+user_response = requests.get(user_prompt_url, timeout=10, verify=False)
+user_response.raise_for_status()  # Check if the request was successful
+retrieved_user_prompt = user_response.text
+print(retrieved_user_prompt)
 
 
 # Step 2: Use the downloaded text in the OpenAI client call
@@ -25,7 +33,7 @@ response = client.chat.completions.create(
       "content": [
         {
           "type": "text",
-          "text": text_from_url
+          "text": retrieved_system_prompt
         }
       ]
     },
@@ -34,7 +42,7 @@ response = client.chat.completions.create(
       "content": [
         {
           "type": "text",
-          "text": "Write me a training on CNAPP (cloud native application protection platform). I need to explain high level concepts as well as interesting low level details."
+          "text": retrieved_user_prompt
         }
       ]
     }
