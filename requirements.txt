@@ -2,3 +2,4 @@ requests
 urllib3
 pypdf
 openai
+security==1.3.1
