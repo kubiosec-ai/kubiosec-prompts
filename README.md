@@ -17,6 +17,7 @@ conda deactivate
 ```
 
 # The idea
+- remove the complexity of creating very well defined prompts for a specific task (re-use of carefully crafted prompts)
 - in systems_prompts we need to development very well generic crafted description of how to plan things <br>
     (ex. software developent, training creation, etc ...)
 - in tasks, we define what plan to develop (ex create a pdf analyzer)
